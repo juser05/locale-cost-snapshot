@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore estimated taxes, housing costs, rent and affordability by location.">
+  <title>Locale — Tax & Cost Snapshot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="#top"><span class="brand-mark">L</span><strong>loca<span>le</span></strong></a>
+    <nav><a href="#snapshot">Cost snapshot</a><a href="#methodology">Methodology</a><a href="#sources">Data sources</a></nav>
+    <a class="compare-link" href="#compare">Compare places <span>→</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Clear numbers for big decisions</span>
+        <h1>Understand the real cost of <em>where you live.</em></h1>
+        <p>Explore estimated taxes, housing costs, rent, and local affordability—using clearly dated public data.</p>
+        <form id="location-form" class="location-form">
+          <label for="zip-input">Enter a ZIP code</label>
+          <div><span>⌖</span><input id="zip-input" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="Try 95123" required><button>Build my snapshot</button></div>
+          <small>Prototype ZIPs: 95123, 78701, 10001, 33101</small>
+        </form>
+        <div class="trust"><span>✓ Government-first sources</span><span>◷ Every figure is dated</span><span>◇ Estimates, not tax advice</span></div>
+      </div>
+      <aside class="preview-card">
+        <div class="preview-top"><span>Example snapshot</span><b>95123</b></div>
+        <h2>San Jose, California</h2><p>Santa Clara County</p>
+        <div class="preview-grid"><div><small>Median home value</small><strong>$1.18M</strong><i>ACS estimate</i></div><div><small>Median gross rent</small><strong>$2,710</strong><i>ACS estimate</i></div><div><small>Typical property tax paid</small><strong>$9,840</strong><i>Annual estimate</i></div><div><small>State income tax</small><strong>Not yet modeled</strong><i>Coverage is labeled</i></div></div>
+        <div class="preview-foot"><span>Data years vary by source</span><span>View methodology →</span></div>
+      </aside>
+    </section>
+
+    <section class="snapshot wrap" id="snapshot">
+      <div class="section-head"><div><span class="eyebrow">Your location snapshot</span><h2 id="location-name">San Jose, California</h2><p id="location-meta">ZIP Code Tabulation Area 95123 · Santa Clara County</p></div><div class="updated"><span>↻</span><div><small>Snapshot assembled</small><time id="assembled-time">Oct 4, 2026</time></div></div></div>
+      <div class="notice"><b>How to read this page</b><span>Tax calculations use your inputs and published rules. Housing figures describe the local area and may be from an earlier survey year.</span></div>
+
+      <div class="dashboard">
+        <section class="calculator-panel">
+          <div class="panel-title"><span>01</span><div><h3>Income tax estimate</h3><p>Adjust the inputs to estimate annual federal tax.</p></div></div>
+          <form id="tax-form">
+            <label>Annual household income<div class="money-input"><span>$</span><input id="income" type="number" min="0" step="1000" value="100000"></div></label>
+            <label>Filing status<select id="filing-status"><option value="single">Single</option><option value="married">Married filing jointly</option><option value="head">Head of household</option></select></label>
+          </form>
+          <div class="tax-result"><div><small>Estimated federal income tax</small><strong id="federal-tax">$13,170</strong><span id="effective-rate">13.2% effective rate</span></div><div class="ring" id="tax-ring"><span>13.2%</span></div></div>
+          <div class="tax-stack"><div><span>Federal estimate</span><b id="federal-row">$13,170</b></div><div><span>State income tax</span><b class="pending">Coverage pending</b></div><div><span>Local income tax</span><b class="pending">Not verified</b></div></div>
+          <p class="fine-print">Uses 2026 federal brackets and the standard deduction. Excludes credits, itemized deductions, payroll tax, capital gains and special circumstances.</p>
+        </section>
+
+        <section class="housing-panel">
+          <div class="panel-title"><span>02</span><div><h3>Housing and local costs</h3><p>Area estimates, not current listings or appraisals.</p></div></div>
+          <div class="metric-grid">
+            <article><span class="metric-icon">⌂</span><small>Median home value</small><strong id="home-value">$1,180,400</strong><p>Census ACS 5-year estimate</p><footer><b id="home-year">2024 data</b><a href="#sources">Source ↗</a></footer></article>
+            <article><span class="metric-icon">▤</span><small>Median gross rent</small><strong id="median-rent">$2,710</strong><p>Includes rent and typical utilities</p><footer><b id="rent-year">2024 data</b><a href="#sources">Source ↗</a></footer></article>
+            <article><span class="metric-icon">◇</span><small>Typical real-estate tax paid</small><strong id="property-tax">$9,840</strong><p>Survey estimate—not a parcel quote</p><footer><b>2024 data</b><a href="#methodology">Details ↗</a></footer></article>
+            <article><span class="metric-icon">◫</span><small>HUD 2-bedroom fair-market rent</small><strong id="hud-rent">$3,140</strong><p>Program benchmark, not asking rent</p><footer><b id="hud-year">FY 2026</b><a href="#sources">Source ↗</a></footer></article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="compare wrap" id="compare">
+      <div><span class="eyebrow">Compare before you move</span><h2>How far does your income go?</h2><p>Choose another prototype location to compare housing costs and federal take-home estimates.</p></div>
+      <div class="comparison-controls"><label>Compare with<select id="compare-location"><option value="78701">Austin, TX</option><option value="10001">New York, NY</option><option value="33101">Miami, FL</option></select></label><button id="compare-button">Compare locations →</button></div>
+      <div class="comparison-results" id="comparison-results" hidden aria-live="polite"></div>
+    </section>
+
+    <section class="method wrap" id="methodology">
+      <div class="method-copy"><span class="eyebrow">Built for transparency</span><h2>We show what a number means—not just the number.</h2><p>ZIP codes do not perfectly match tax jurisdictions. Exact sales and property taxes may depend on a street address, parcel, school district, exemptions, and special districts.</p></div>
+      <div class="rules"><article><b>Estimate</b><h3>Calculated figures</h3><p>Based on your inputs and a versioned set of published tax rules.</p></article><article><b>Statistic</b><h3>Community figures</h3><p>Survey estimates describing an area, with source year and margin-of-error context.</p></article><article><b>Unavailable</b><h3>No false precision</h3><p>When authoritative local coverage is missing, we say so instead of guessing.</p></article></div>
+    </section>
+
+    <section class="sources wrap" id="sources"><div><span class="eyebrow">Primary sources</span><h2>Government-first data</h2></div><div class="source-list"><a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noreferrer"><b>IRS</b><span>Federal brackets and deductions</span><i>Annual</i>↗</a><a href="https://www.census.gov/data/developers/data-sets/acs-5year.html" target="_blank" rel="noreferrer"><b>Census</b><span>Home values, rent and housing costs</span><i>Annual</i>↗</a><a href="https://www.huduser.gov/portal/datasets/fmr.html" target="_blank" rel="noreferrer"><b>HUD</b><span>Fair Market Rent benchmarks</span><i>Annual</i>↗</a><a href="https://www.fhfa.gov/data/hpi" target="_blank" rel="noreferrer"><b>FHFA</b><span>Home-price trends</span><i>Quarterly</i>↗</a></div></section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">L</span><strong>locale</strong></div><p>Public data made useful for everyday decisions.</p><div><a href="#methodology">Methodology</a><a href="#sources">Sources</a></div><small>Prototype estimates only. Not tax, legal, real-estate, or financial advice.</small></footer>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
