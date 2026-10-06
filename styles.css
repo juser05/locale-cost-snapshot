@@ -116,13 +116,11 @@ h1 em { color: var(--blue); font-weight: 500; }
 .preview-card {
   position: relative;
   padding: 28px;
-  border: 1px solid rgba(255,255,255,.8);
+  border: 1px solid #d5e3de;
   border-radius: 24px;
-  background: rgba(255,255,255,.91);
+  background: #e7f0ed;
   box-shadow: var(--shadow);
-  transform: rotate(1.2deg);
 }
-.preview-card::before { content: ""; position: absolute; inset: 10px -18px -18px 18px; z-index: -1; border-radius: 24px; background: #dce9e4; transform: rotate(-2deg); }
 .preview-top, .preview-foot { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 12px; }
 .preview-top b { padding: 4px 9px; border-radius: 99px; color: var(--blue); background: var(--soft-blue); }
 .preview-card h2 { margin-top: 27px; font-size: 33px; }
@@ -257,7 +255,7 @@ body > footer small { grid-column: 1/-1; padding-top: 18px; border-top: 1px soli
   header { grid-template-columns: 1fr auto; }
   header nav { display: none; }
   .hero { grid-template-columns: 1fr; padding-top: 65px; }
-  .preview-card { max-width: 650px; transform: none; }
+  .preview-card { max-width: 650px; }
   .dashboard { grid-template-columns: 1fr; }
   .compare { grid-template-columns: 1fr; align-items: stretch; gap: 30px; }
   .comparison-results { grid-column: 1; }
