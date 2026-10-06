@@ -24,9 +24,10 @@
         <h1>Understand the real cost of <em>where you live.</em></h1>
         <p>Explore estimated taxes, housing costs, rent, and local affordability—using clearly dated public data.</p>
         <form id="location-form" class="location-form">
-          <label for="zip-input">Enter a ZIP code</label>
-          <div><span>⌖</span><input id="zip-input" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="Try 95123" required><button>Build my snapshot</button></div>
-          <small>Search Census ZIP areas nationwide · Try 95123, 78701, 10001, or 33101</small>
+          <label for="zip-input">Enter a ZIP code or city</label>
+          <div><span>⌖</span><input id="zip-input" maxlength="80" placeholder="Try 95123 or Austin, TX" autocomplete="off" required><button>Build my snapshot</button></div>
+          <div class="search-results" id="search-results" hidden></div>
+          <small>Search 33,772 Census ZIP areas nationwide</small>
         </form>
         <div class="trust"><span>✓ Government-first sources</span><span>◷ Every figure is dated</span><span>◇ Estimates, not tax advice</span></div>
       </div>
@@ -77,7 +78,7 @@
       <div class="rules"><article><b>Estimate</b><h3>Calculated figures</h3><p>Based on your inputs and a versioned set of published tax rules.</p></article><article><b>Statistic</b><h3>Community figures</h3><p>Survey estimates describing an area, with source year and margin-of-error context.</p></article><article><b>Unavailable</b><h3>No false precision</h3><p>When authoritative local coverage is missing, we say so instead of guessing.</p></article></div>
     </section>
 
-    <section class="sources wrap" id="sources"><div><span class="eyebrow">Primary sources</span><h2>Government-first data</h2></div><div class="source-list"><a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noreferrer"><b>IRS</b><span>Federal brackets and deductions</span><i>Annual</i>↗</a><a href="https://www.census.gov/data/developers/data-sets/acs-5year.html" target="_blank" rel="noreferrer"><b>Census</b><span>Home values, rent and housing costs</span><i>Annual</i>↗</a><a href="https://www.huduser.gov/portal/datasets/fmr.html" target="_blank" rel="noreferrer"><b>HUD</b><span>Fair Market Rent benchmarks</span><i>Annual</i>↗</a><a href="https://www.fhfa.gov/data/hpi" target="_blank" rel="noreferrer"><b>FHFA</b><span>Home-price trends</span><i>Quarterly</i>↗</a></div></section>
+    <section class="sources wrap" id="sources"><div><span class="eyebrow">Primary sources</span><h2>Government-first data</h2></div><div class="source-list"><a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noreferrer"><b>IRS</b><span>Federal brackets and deductions</span><i>Annual</i>↗</a><a href="https://www.census.gov/data/developers/data-sets/acs-5year.html" target="_blank" rel="noreferrer"><b>Census</b><span>Home values, rent and housing costs</span><i>Annual</i>↗</a><a href="https://www.geonames.org/export/zip/" target="_blank" rel="noreferrer"><b>GeoNames</b><span>City, state and ZIP lookup labels</span><i>CC BY 3.0</i>↗</a><a href="https://www.huduser.gov/portal/datasets/fmr.html" target="_blank" rel="noreferrer"><b>HUD</b><span>Fair Market Rent benchmarks</span><i>Planned</i>↗</a><a href="https://www.fhfa.gov/data/hpi" target="_blank" rel="noreferrer"><b>FHFA</b><span>Home-price trends</span><i>Planned</i>↗</a></div></section>
   </main>
 
   <footer><div class="brand"><span class="brand-mark">L</span><strong>locale</strong></div><p>Public data made useful for everyday decisions.</p><div><a href="#methodology">Methodology</a><a href="#sources">Sources</a></div><small>Prototype estimates only. Not tax, legal, real-estate, or financial advice.</small></footer>

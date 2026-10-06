@@ -25,7 +25,7 @@ ZIP codes are mailing routes, not tax boundaries. The product should use ZIP/ZCT
 
 ## Current limitation
 
-Nationwide ACS ZIP-area housing coverage is generated and source-linked. HUD Fair Market Rent, friendly place/county names outside the four initial locations, and verified state/local income-tax rule adapters remain future work.
+Nationwide ACS ZIP-area housing coverage and GeoNames place lookup are generated and source-linked. HUD Fair Market Rent and verified state/local income-tax rule adapters remain future work.
 
 ## Refresh command
 
@@ -33,6 +33,7 @@ Request a free Census Data API key, keep it outside source control, and run:
 
 ```bash
 CENSUS_API_KEY="your-key" npm run refresh:census
+npm run refresh:places
 npm run build
 ```
 
