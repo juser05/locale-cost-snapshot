@@ -1,1 +1,13 @@
-{"name":"location-cost-snapshot","version":"0.1.0","private":true,"scripts":{"serve":"python3 -m http.server 4174"}}
+{
+  "name": "location-cost-snapshot",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "python3 -m http.server 4174",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.147.0"
+  }
+}
