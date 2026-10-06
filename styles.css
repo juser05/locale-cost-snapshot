@@ -132,7 +132,8 @@ h1 em { color: var(--blue); font-weight: 500; }
 .preview-grid small, .preview-grid i { color: var(--muted); font-size: 11px; font-style: normal; }
 .preview-grid strong { margin: 3px 0; font-size: 22px; }
 .preview-foot { margin-top: 22px; }
-.preview-foot span:last-child { color: var(--blue); font-weight: 700; }
+.preview-foot a { color: var(--blue); font-weight: 700; }
+.preview-foot a:hover { color: var(--blue-dark); }
 
 .wrap { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 .snapshot { padding-block: 92px; scroll-margin-top: 70px; }
