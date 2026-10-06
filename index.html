@@ -38,8 +38,8 @@
       </aside>
     </section>
 
-    <section class="snapshot wrap" id="snapshot">
-      <div class="section-head"><div><span class="eyebrow">Your location snapshot</span><h2 id="location-name">San Jose, California</h2><p id="location-meta">ZIP Code Tabulation Area 95123 · Santa Clara County</p></div><div class="updated"><span>↻</span><div><small>Snapshot assembled</small><time id="assembled-time">Oct 4, 2026</time></div></div></div>
+    <section class="snapshot wrap" id="snapshot" hidden>
+      <div class="section-head"><div><span class="eyebrow">Your location snapshot</span><h2 id="location-name"></h2><p id="location-meta"></p></div><div class="section-actions"><button class="clear-location" id="clear-location" type="button">← Clear location</button><div class="updated"><span>↻</span><div><small>Snapshot assembled</small><time id="assembled-time">Oct 4, 2026</time></div></div></div></div>
       <div class="notice"><b>How to read this page</b><span>Tax calculations use your inputs and published rules. Housing figures describe the local area and may be from an earlier survey year.</span></div>
 
       <div class="dashboard">
@@ -66,7 +66,7 @@
       </div>
     </section>
 
-    <section class="compare wrap" id="compare">
+    <section class="compare wrap" id="compare" hidden>
       <div><span class="eyebrow">Compare before you move</span><h2>How far does your income go?</h2><p>Choose another prototype location to compare housing costs and federal take-home estimates.</p></div>
       <div class="comparison-controls"><label>Compare with<select id="compare-location"><option value="78701">Austin, TX</option><option value="10001">New York, NY</option><option value="33101">Miami, FL</option></select></label><button id="compare-button">Compare locations →</button></div>
       <div class="comparison-results" id="comparison-results" hidden aria-live="polite"></div>
