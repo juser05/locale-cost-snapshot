@@ -23,6 +23,17 @@ Locale is intentionally a standalone project. The initial interface uses a small
 
 ZIP codes are mailing routes, not tax boundaries. The product should use ZIP/ZCTA for discovery, then require a full street address before claiming an exact local tax jurisdiction.
 
-## Prototype limitation
+## Current limitation
 
-Values in `app.js` are design fixtures, not a production dataset. They must be replaced with ingested, source-linked records before public launch.
+Nationwide ACS ZIP-area housing coverage is generated and source-linked. HUD Fair Market Rent, friendly place/county names outside the four initial locations, and verified state/local income-tax rule adapters remain future work.
+
+## Refresh command
+
+Request a free Census Data API key, keep it outside source control, and run:
+
+```bash
+CENSUS_API_KEY="your-key" npm run refresh:census
+npm run build
+```
+
+This produces prefix-sharded files under `data/zips/`, allowing each browser lookup to download only the relevant portion of the national dataset.

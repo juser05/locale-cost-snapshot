@@ -1,0 +1,8 @@
+{
+  "source": "U.S. Census Bureau ACS 5-year estimates",
+  "sourceYear": 2024,
+  "refreshedAt": "2026-10-06T01:00:02.204Z",
+  "records": 33772,
+  "shards": 99,
+  "endpoint": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E,B25064_001E,B25103_001E&for=zip%20code%20tabulation%20area:*&key=[redacted]"
+}

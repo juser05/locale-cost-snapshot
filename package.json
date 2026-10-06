@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "serve": "python3 -m http.server 4174",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "refresh:census": "node scripts/refresh-census.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.147.0"

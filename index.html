@@ -26,7 +26,7 @@
         <form id="location-form" class="location-form">
           <label for="zip-input">Enter a ZIP code</label>
           <div><span>⌖</span><input id="zip-input" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="Try 95123" required><button>Build my snapshot</button></div>
-          <small>Prototype ZIPs: 95123, 78701, 10001, 33101</small>
+          <small>Search Census ZIP areas nationwide · Try 95123, 78701, 10001, or 33101</small>
         </form>
         <div class="trust"><span>✓ Government-first sources</span><span>◷ Every figure is dated</span><span>◇ Estimates, not tax advice</span></div>
       </div>
@@ -39,7 +39,7 @@
     </section>
 
     <section class="snapshot wrap" id="snapshot" hidden>
-      <div class="section-head"><div><span class="eyebrow">Your location snapshot</span><h2 id="location-name"></h2><p id="location-meta"></p></div><div class="section-actions"><button class="clear-location" id="clear-location" type="button">← Clear location</button><div class="updated"><span>↻</span><div><small>Snapshot assembled</small><time id="assembled-time">Oct 4, 2026</time></div></div></div></div>
+      <div class="section-head"><div><span class="eyebrow">Your location snapshot</span><h2 id="location-name"></h2><p id="location-meta"></p></div><div class="section-actions"><button class="clear-location" id="clear-location" type="button">← Clear location</button><div class="updated"><span>↻</span><div><small>Site data refreshed</small><time id="assembled-time">Loading…</time></div></div></div></div>
       <div class="notice"><b>How to read this page</b><span>Tax calculations use your inputs and published rules. Housing figures describe the local area and may be from an earlier survey year.</span></div>
 
       <div class="dashboard">
@@ -59,7 +59,7 @@
           <div class="metric-grid">
             <article><span class="metric-icon">⌂</span><small>Median home value</small><strong id="home-value">$1,180,400</strong><p>Census ACS 5-year estimate</p><footer><b id="home-year">2024 data</b><a href="#sources">Source ↗</a></footer></article>
             <article><span class="metric-icon">▤</span><small>Median gross rent</small><strong id="median-rent">$2,710</strong><p>Includes rent and typical utilities</p><footer><b id="rent-year">2024 data</b><a href="#sources">Source ↗</a></footer></article>
-            <article><span class="metric-icon">◇</span><small>Typical real-estate tax paid</small><strong id="property-tax">$9,840</strong><p>Survey estimate—not a parcel quote</p><footer><b>2024 data</b><a href="#methodology">Details ↗</a></footer></article>
+            <article><span class="metric-icon">◇</span><small>Typical real-estate tax paid</small><strong id="property-tax">$9,840</strong><p>Survey estimate—not a parcel quote</p><footer><b id="property-year">2024 data</b><a href="#methodology">Details ↗</a></footer></article>
             <article><span class="metric-icon">◫</span><small>HUD 2-bedroom fair-market rent</small><strong id="hud-rent">$3,140</strong><p>Program benchmark, not asking rent</p><footer><b id="hud-year">FY 2026</b><a href="#sources">Source ↗</a></footer></article>
           </div>
         </section>

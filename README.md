@@ -22,10 +22,11 @@ The checked-in `wrangler.jsonc` is the source of truth for the Cloudflare Worker
 ## Current coverage
 
 - Functional 2026 federal tax estimate for three filing statuses
-- Four demonstration ZIP-code snapshots
+- 33,772 Census ZIP Code Tabulation Areas, prefix-sharded for fast lookup
+- 2024 ACS median home value, median gross rent, and median real-estate tax paid
 - Explicit source-year and methodology language
 - State and local tax coverage intentionally marked unavailable until authoritative rule adapters exist
 
-The housing figures are demonstration values for interface development. The next release milestone is replacing them with versioned Census ACS and HUD ingestion.
+The four named prototype locations retain friendly city/county labels, but their housing figures now come from the generated Census dataset. Other locations currently use their ZIP/ZCTA identifier until a national place-name crosswalk is added.
 
 See [DATA_PLAN.md](DATA_PLAN.md) for the planned source adapters and refresh process.
